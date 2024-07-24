@@ -10,7 +10,7 @@ import {
 } from './ui/card';
 import { BackgroundGradient } from './ui/background-gradient';
 import { Textarea } from './ui/textarea';
-import MouseTrackAnimation from './mouse-track-animation';
+import MouseTrackAnimation from './ui/mouse-track-animation';
 import { Input } from './ui/input';
 import { Label } from './ui/label';
 import { sendEmail } from '@/actions/email';
