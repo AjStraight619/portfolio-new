@@ -1,16 +1,8 @@
 import React, { createElement } from 'react';
 import { PinContainer } from './ui/3d-pin';
-import {
-  Card,
-  CardContent,
-  CardDescription,
-  CardHeader,
-  CardTitle,
-} from './ui/card';
-import Image from 'next/image';
-import { BackgroundBeams } from './ui/background-beams';
-import { FaLocationArrow } from 'react-icons/fa6';
+
 import { projects } from '@/data';
+import Image from 'next/image';
 
 const Projects = () => {
   return (
@@ -28,15 +20,17 @@ const Projects = () => {
             <PinContainer title={item.title} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
-                  className="relative w-full h-full overflow-hidden lg:rounded-3xl"
+                  className="relative w-full h-full overflow-hidden lg:rounded-3xl p-3"
                   style={{ backgroundColor: '#13162D' }}
                 >
-                  <img src="/project-bg.png" alt="bgimg" />
+                  {/* <img src="/project-bg.png" alt="bgimg" /> */}
                 </div>
-                <img
+                <Image
                   src={item.img}
                   alt="cover"
-                  className="z-10 absolute bottom-0"
+                  className="z-10"
+                  fill
+                  quality={100}
                 />
               </div>
 
@@ -70,13 +64,6 @@ const Projects = () => {
                     </div>
                   ))}
                 </div>
-
-                {/* <div className="flex justify-center items-center">
-                  <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                    Check Live Site
-                  </p>
-                  <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div> */}
               </div>
             </PinContainer>
           </div>

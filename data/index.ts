@@ -1,3 +1,4 @@
+import { FaAws } from 'react-icons/fa6';
 import {
   SiFramer,
   SiGo,
@@ -11,7 +12,12 @@ import {
 } from 'react-icons/si';
 
 export const gridData = [
-  { id: 1, title: 'Title1', description: 'Description1' },
+  {
+    id: 1,
+    title: 'Skills',
+    description:
+      'List of skills I have developed through school and personal indevors',
+  },
   { id: 2, title: 'Title2', description: 'Description2' },
   {
     id: 3,
@@ -30,7 +36,7 @@ export const projects = [
     id: 1,
     title: 'Pathfinding Visualizer',
     des: 'Explore the brilliance of pathfinding algorithms and how they work.',
-    img: '/pathfinding.png',
+    img: '/algo-visualizer.png',
     techList: [
       { icon: SiTypescript, color: '#3178c6' },
       {
@@ -74,4 +80,19 @@ export const projects = [
   //   iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/three.svg', '/gsap.svg'],
   //   link: '/ui.apple.com',
   // },
+];
+
+export const skills = [
+  { icon: SiTypescript, color: '#3178c6' },
+  { icon: SiGo, color: '#00add8' },
+  {
+    icon: SiReact,
+    color: '#61dafb',
+  },
+  { icon: SiNextdotjs, color: '#FFFFFF' },
+  { icon: FaAws, color: '#FF9900' },
+  { icon: SiPrisma, color: '#2d3748' },
+  { icon: SiZod, color: '#ff5a5f' },
+  { icon: SiTailwindcss, color: '#38b2ac' },
+  { icon: SiFramer, color: '#e91e63' },
 ];

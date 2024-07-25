@@ -1,5 +1,5 @@
 import React from 'react';
-import { BentoGrid, BentoGridItem } from './ui/bento-grid';
+import { BentoGrid, BentoGridCard } from './ui/bento-grid';
 import { gridData } from '@/data';
 
 const Grid = () => {
@@ -7,7 +7,7 @@ const Grid = () => {
     <section id="about">
       <BentoGrid>
         {gridData.map((item, idx) => (
-          <BentoGridItem
+          <BentoGridCard
             id={item.id}
             key={item.id}
             title={item.title}
