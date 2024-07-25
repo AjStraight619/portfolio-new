@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { createElement } from 'react';
 import { PinContainer } from './ui/3d-pin';
 import {
   Card,
@@ -14,7 +14,7 @@ import { projects } from '@/data';
 
 const Projects = () => {
   return (
-    <div className="py-20">
+    <section id="projects" className="py-20">
       <h1 className="heading">
         A small selection of{' '}
         <span className="text-purple">recent projects</span>
@@ -25,16 +25,13 @@ const Projects = () => {
             className="lg:min-h-[32.5rem] h-[25rem] flex items-center justify-center sm:w-96 w-[80vw]"
             key={item.id}
           >
-            <PinContainer
-              title="/ui.aceternity.com"
-              href="https://twitter.com/mannupaaji"
-            >
+            <PinContainer title={item.title} href={item.link}>
               <div className="relative flex items-center justify-center sm:w-96 w-[80vw] overflow-hidden h-[20vh] lg:h-[30vh] mb-10">
                 <div
                   className="relative w-full h-full overflow-hidden lg:rounded-3xl"
                   style={{ backgroundColor: '#13162D' }}
                 >
-                  <img src="/pathfinding.png" alt="bgimg" />
+                  <img src="/project-bg.png" alt="bgimg" />
                 </div>
                 <img
                   src={item.img}
@@ -59,7 +56,7 @@ const Projects = () => {
 
               <div className="flex items-center justify-between mt-7 mb-3">
                 <div className="flex items-center">
-                  {item.iconLists.map((icon, index) => (
+                  {item.techList.map(({ icon, color }, index) => (
                     <div
                       key={index}
                       className="border border-white/[.2] rounded-full bg-black lg:w-10 lg:h-10 w-8 h-8 flex justify-center items-center"
@@ -67,23 +64,25 @@ const Projects = () => {
                         transform: `translateX(-${5 * index + 2}px)`,
                       }}
                     >
-                      <img src={icon} alt="icon5" className="p-2" />
+                      {createElement(icon, {
+                        color: color,
+                      })}
                     </div>
                   ))}
                 </div>
 
-                <div className="flex justify-center items-center">
+                {/* <div className="flex justify-center items-center">
                   <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                     Check Live Site
                   </p>
                   <FaLocationArrow className="ms-3" color="#CBACF9" />
-                </div>
+                </div> */}
               </div>
             </PinContainer>
           </div>
         ))}
       </div>
-    </div>
+    </section>
   );
 };
 

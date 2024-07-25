@@ -1,3 +1,15 @@
+import {
+  SiFramer,
+  SiGo,
+  SiJavascript,
+  SiNextdotjs,
+  SiPrisma,
+  SiReact,
+  SiTailwindcss,
+  SiTypescript,
+  SiZod,
+} from 'react-icons/si';
+
 export const gridData = [
   { id: 1, title: 'Title1', description: 'Description1' },
   { id: 2, title: 'Title2', description: 'Description2' },
@@ -12,37 +24,54 @@ export const gridData = [
     description: 'Professional and Education Achievements',
   },
 ];
+
 export const projects = [
   {
     id: 1,
-    title: '3D Solar System Planets to Explore',
-    des: 'Explore the wonders of our solar system with this captivating 3D simulation of the planets using Three.js.',
-    img: '/p1.svg',
-    iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/fm.svg'],
-    link: '/ui.earth.com',
+    title: 'Pathfinding Visualizer',
+    des: 'Explore the brilliance of pathfinding algorithms and how they work.',
+    img: '/pathfinding.png',
+    techList: [
+      { icon: SiTypescript, color: '#3178c6' },
+      {
+        icon: SiReact,
+        color: '#61dafb',
+      },
+      { icon: SiTailwindcss, color: '#38b2ac' },
+      { icon: SiFramer, color: '#e91e63' },
+    ],
+    link: 'https://algo-visualizer-nine.vercel.app/',
   },
   {
     id: 2,
-    title: 'Yoom - Video Conferencing App',
-    des: 'Simplify your video conferencing experience with Yoom. Seamlessly connect with colleagues and friends.',
-    img: '/p2.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/stream.svg', '/c.svg'],
-    link: '/ui.yoom.com',
+    title: 'Pictionary With Friends',
+    des: 'An extension of Skribbl.io with better drawing and shape creation.',
+    img: '/pictionary.png',
+    techList: [
+      { icon: SiTypescript, color: '#3178c6' },
+      { icon: SiGo, color: '#00add8' },
+      { icon: SiNextdotjs, color: '#FFFFFF' },
+      { icon: SiPrisma, color: '#2d3748' },
+      { icon: SiZod, color: '#ff5a5f' },
+      { icon: SiTailwindcss, color: '#38b2ac' },
+      { icon: SiFramer, color: '#e91e63' },
+    ],
+    link: 'https://pictionary-tan.vercel.app/',
   },
-  {
-    id: 3,
-    title: 'AI Image SaaS - Canva Application',
-    des: 'A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.',
-    img: '/p3.svg',
-    iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/c.svg'],
-    link: '/ui.aiimg.com',
-  },
-  {
-    id: 4,
-    title: 'Animated Apple Iphone 3D Website',
-    des: 'Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..',
-    img: '/p4.svg',
-    iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/three.svg', '/gsap.svg'],
-    link: '/ui.apple.com',
-  },
+  // {
+  //   id: 3,
+  //   title: 'AI Image SaaS - Canva Application',
+  //   des: 'A REAL Software-as-a-Service app with AI features and a payments and credits system using the latest tech stack.',
+  //   img: '/p3.svg',
+  //   iconLists: ['/re.svg', '/tail.svg', '/ts.svg', '/three.svg', '/c.svg'],
+  //   link: '/ui.aiimg.com',
+  // },
+  // {
+  //   id: 4,
+  //   title: 'Animated Apple Iphone 3D Website',
+  //   des: 'Recreated the Apple iPhone 15 Pro website, combining GSAP animations and Three.js 3D effects..',
+  //   img: '/p4.svg',
+  //   iconLists: ['/next.svg', '/tail.svg', '/ts.svg', '/three.svg', '/gsap.svg'],
+  //   link: '/ui.apple.com',
+  // },
 ];

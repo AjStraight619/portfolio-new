@@ -52,7 +52,7 @@ const Contact = () => {
           </Card>
         </BackgroundGradient>
       </div>
-      <BackgroundBeams />
+      {/* <BackgroundBeams /> */}
     </section>
   );
 };
