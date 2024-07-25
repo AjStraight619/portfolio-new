@@ -35,7 +35,7 @@ export default function Home() {
   );
 }
 
-export const navItems = [
+const navItems = [
   {
     name: 'Home',
     link: '/',
